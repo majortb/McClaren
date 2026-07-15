@@ -462,6 +462,12 @@
       color: var(--slalom-navy);
     }
 
+    .great-lakes-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .partner-tags {
       display: flex;
       flex-wrap: wrap;
@@ -524,6 +530,8 @@
     }
 
     .idea-panel {
+      position: sticky;
+      top: 92px;
       background: white;
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -613,6 +621,444 @@
 
     .benefit span {
       color: var(--muted);
+    }
+
+    .demo-box {
+      margin-top: 30px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 18px 50px rgba(0, 63, 127, .08);
+      overflow: hidden;
+    }
+
+    .demo-head {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 20px;
+      color: var(--slalom-navy);
+      font-weight: 900;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, rgba(232, 243, 251, .86), rgba(255, 255, 255, .96));
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 5px rgba(40, 189, 90, .16);
+    }
+
+    .scenario-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .scen-btn {
+      min-height: 48px;
+      border: 1px solid rgba(0, 91, 170, .18);
+      border-radius: 6px;
+      background: white;
+      color: var(--mclaren-deep);
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+    }
+
+    .scen-btn:hover,
+    .scen-btn.active {
+      transform: translateY(-2px);
+      border-color: rgba(12, 98, 251, .42);
+      color: var(--slalom-blue);
+      box-shadow: 0 12px 28px rgba(0, 63, 127, .10);
+    }
+
+    .demo-stage {
+      display: grid;
+      place-items: center;
+      padding: 28px 20px 24px;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(0, 163, 173, .14), transparent 34%),
+        linear-gradient(180deg, rgba(245, 249, 252, .96), #ffffff);
+    }
+
+    .iphone-sim {
+      width: min(100%, 360px);
+      border: 7px solid #111319;
+      border-radius: 48px;
+      background: #ffffff;
+      box-shadow: 0 24px 60px rgba(0, 10, 37, .24);
+      overflow: hidden;
+    }
+
+    .iphone-screen {
+      min-height: 760px;
+      border: 2px solid rgba(255, 126, 38, .72);
+      border-radius: 40px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .iphone-status {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      color: #05070a;
+      font-weight: 900;
+      font-size: 15px;
+    }
+
+    .iphone-notch {
+      width: 118px;
+      height: 30px;
+      border-radius: 999px;
+      background: #05070a;
+      box-shadow: inset -22px 0 0 rgba(14, 33, 64, .84);
+    }
+
+    .iphone-icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .iphone-signal {
+      display: inline-flex;
+      align-items: end;
+      gap: 2px;
+      height: 14px;
+    }
+
+    .iphone-signal span {
+      display: block;
+      width: 3px;
+      border-radius: 999px;
+      background: #05070a;
+    }
+
+    .iphone-signal span:nth-child(1) { height: 5px; }
+    .iphone-signal span:nth-child(2) { height: 8px; }
+    .iphone-signal span:nth-child(3) { height: 11px; }
+    .iphone-signal span:nth-child(4) { height: 14px; }
+
+    .iphone-battery {
+      width: 26px;
+      height: 13px;
+      border: 2px solid #05070a;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .iphone-battery::before {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius: 2px;
+      background: #05070a;
+    }
+
+    .iphone-battery::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      top: 3px;
+      width: 3px;
+      height: 5px;
+      border-radius: 0 2px 2px 0;
+      background: #05070a;
+    }
+
+    .rcs-header {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      padding: 6px 20px 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, .06);
+    }
+
+    .mclaren-mark {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: white;
+      color: var(--mclaren-blue);
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 7px 18px rgba(0, 63, 127, .18);
+      position: relative;
+    }
+
+    .mclaren-mark::after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 18px;
+      right: 8px;
+      bottom: 9px;
+      border-radius: 999px 999px 2px 999px;
+      background: rgba(0, 163, 173, .55);
+      transform: rotate(-34deg);
+    }
+
+    .rcs-sender {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 0 13px;
+      border-radius: 999px;
+      background: white;
+      color: #202124;
+      font-weight: 900;
+      box-shadow: 0 6px 18px rgba(0, 63, 127, .09);
+    }
+
+    .rcs-verified {
+      width: 18px;
+      height: 18px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #89909b;
+      color: white;
+      font-size: 12px;
+    }
+
+    .chat {
+      height: 596px;
+      padding: 20px 16px;
+      display: grid;
+      align-content: start;
+      gap: 12px;
+      overflow-y: auto;
+      background: #ffffff;
+    }
+
+    .msg {
+      max-width: 88%;
+      border-radius: 20px;
+      padding: 12px 14px;
+      animation: bubbleIn .28s ease both;
+      font-size: 15px;
+      line-height: 1.35;
+      position: relative;
+    }
+
+    .msg.system {
+      justify-self: start;
+      max-width: 100%;
+      padding-left: 42px;
+      border-radius: 0;
+      background: transparent;
+      color: #8a8d93;
+      font-weight: 700;
+      position: relative;
+      box-shadow: none;
+    }
+
+    .msg.system::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 27px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border: 1.5px solid #b7bbc2;
+      border-radius: 999px;
+      color: #9aa0a6;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .msg.patient {
+      justify-self: end;
+      background: #e9eaee;
+      color: #111319;
+      border-bottom-right-radius: 5px;
+    }
+
+    .msg.agent {
+      justify-self: start;
+      background: #f1f2f6;
+      color: var(--ink);
+      border-bottom-left-radius: 5px;
+    }
+
+    .msg-icon {
+      width: 24px;
+      height: 24px;
+      display: inline-grid;
+      place-items: center;
+      margin-right: 8px;
+      border-radius: 50%;
+      color: white;
+      font-size: 13px;
+      font-weight: 900;
+      vertical-align: top;
+      box-shadow: 0 4px 10px rgba(0, 63, 127, .14);
+    }
+
+    .msg.patient .msg-icon {
+      background: linear-gradient(135deg, #ff7a59, #ffb82e);
+    }
+
+    .msg.agent .msg-icon {
+      background: linear-gradient(135deg, var(--mclaren-blue), var(--mclaren-teal));
+    }
+
+    .msg.system .msg-icon {
+      display: none;
+    }
+
+    .map-card {
+      justify-self: start;
+      width: 100%;
+      max-width: 300px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(0, 91, 170, .14);
+      background: white;
+      box-shadow: 0 10px 24px rgba(0, 63, 127, .10);
+    }
+
+    .map-visual {
+      position: relative;
+      height: 168px;
+      overflow: hidden;
+      background:
+        linear-gradient(32deg, transparent 47%, rgba(255,255,255,.95) 48%, rgba(255,255,255,.95) 52%, transparent 53%),
+        linear-gradient(145deg, transparent 42%, rgba(255,255,255,.85) 43%, rgba(255,255,255,.85) 47%, transparent 48%),
+        linear-gradient(90deg, rgba(0, 163, 173, .16) 0 18%, transparent 18% 100%),
+        repeating-linear-gradient(0deg, #e9f4fb 0 23px, #d5e7f1 24px 25px),
+        repeating-linear-gradient(90deg, transparent 0 34px, rgba(0, 91, 170, .12) 35px 36px),
+        #edf6fb;
+    }
+
+    .map-route {
+      position: absolute;
+      inset: 34px 28px 52px 30px;
+      border-top: 6px solid #263cff;
+      border-right: 6px solid #263cff;
+      border-bottom: 6px solid #263cff;
+      border-left: 0;
+      border-radius: 10px 26px 18px 4px;
+      transform: skewY(-10deg);
+      filter: drop-shadow(0 1px 0 white);
+    }
+
+    .map-route::before {
+      content: "";
+      position: absolute;
+      left: 30px;
+      bottom: -6px;
+      width: 108px;
+      border-bottom: 6px solid #263cff;
+      transform: rotate(-18deg);
+      transform-origin: left center;
+    }
+
+    .map-pin {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50% 50% 50% 0;
+      background: #e53935;
+      transform: rotate(-45deg);
+      box-shadow: 0 0 0 3px white;
+    }
+
+    .map-pin::after {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .map-pin.start { left: 24px; top: 34px; }
+    .map-pin.end { right: 34px; top: 52px; }
+
+    .map-label {
+      position: absolute;
+      right: 45px;
+      top: 20px;
+      padding: 6px 8px;
+      border-radius: 5px;
+      background: rgba(255,255,255,.92);
+      color: #1b5e20;
+      font-size: 12px;
+      font-weight: 900;
+      box-shadow: 0 3px 8px rgba(0,0,0,.12);
+    }
+
+    .map-road {
+      position: absolute;
+      color: #6b7280;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .map-road.one { left: 42px; bottom: 36px; }
+    .map-road.two { right: 34px; bottom: 68px; transform: rotate(-28deg); }
+    .map-road.three { left: 112px; top: 58px; color: #7b61ff; }
+
+    .map-copy {
+      padding: 12px 14px 14px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .map-copy strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--slalom-navy);
+    }
+
+    .result-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+    }
+
+    .result-bar > div {
+      background: white;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .r-num {
+      color: var(--slalom-navy);
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .r-lab {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
     }
 
     .cta {
@@ -706,8 +1152,17 @@
       .hero-inner,
       .expertise,
       .ideas-inner,
-      .impact-wrap {
+      .impact-wrap,
+      .scenario-row {
         grid-template-columns: 1fr;
+      }
+
+      .scenario-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .idea-panel {
+        position: static;
       }
 
       .hero {
@@ -750,8 +1205,62 @@
       }
 
       .idea-panel,
-      .calculator {
+      .calculator,
+      .demo-box {
         padding: 20px;
+      }
+
+      .demo-box {
+        padding: 0;
+      }
+
+      .msg {
+        max-width: 92%;
+      }
+
+      .demo-stage {
+        padding: 18px 12px;
+      }
+
+      .iphone-sim {
+        width: min(100%, 340px);
+        border-width: 5px;
+        border-radius: 36px;
+      }
+
+      .iphone-screen {
+        min-height: 620px;
+        border-radius: 30px;
+      }
+
+      .iphone-status {
+        padding: 0 16px;
+        font-size: 13px;
+      }
+
+      .iphone-notch {
+        width: 90px;
+        height: 26px;
+      }
+
+      .iphone-icons {
+        gap: 5px;
+        font-size: 11px;
+      }
+
+      .chat {
+        height: 470px;
+        padding: 18px 14px;
+      }
+
+      .result-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .scenario-row {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -875,6 +1384,7 @@
           <div class="section-kicker">2. Five Patient Communication Concepts for McLaren</div>
           <h2>A modernized single patient front door.</h2>
           <p class="lead">Improve routine patient communications into verified, secure, branded, interactive conversations.</p>
+          <p class="lead">Modern patient communication solutions offer End-to-End Encryption, Verified Sender Identity, Message Revocation, Granular Delivery Receipts, Compliance and Archiving Controls and Automatic Fallback features.</p>
           <div class="idea-tabs" role="tablist" aria-label="Patient Communication Concepts list">
             <button class="idea-tab active" data-idea="0">1. Verified care journey thread</button>
             <button class="idea-tab" data-idea="1">2. Smart scheduling and arrival</button>
@@ -918,20 +1428,60 @@
           <div class="benefit"><strong>More measurable journeys</strong><span>Read receipts, action clicks, and response patterns can help McLaren optimize communications by service line, location, and patient segment.</span></div>
         </div>
       </div>
+
+      <div class="demo-box">
+        <div class="demo-head"><div class="dot"></div><span>Simulation — click a Patient Scenario</span></div>
+        <div class="scenario-row">
+          <button class="scen-btn" type="button" onclick="runScenario(event,0)">📅 2 AM appointment request</button>
+          <button class="scen-btn" type="button" onclick="runScenario(event,1)">💊 Prescription refill</button>
+          <button class="scen-btn" type="button" onclick="runScenario(event,2)">🧾 Confusing bill</button>
+          <button class="scen-btn" type="button" onclick="runScenario(event,3)">🗺️ Closest facility directions</button>
+        </div>
+        <div class="demo-stage">
+          <div class="iphone-sim" aria-label="McLaren RCS simulation on iPhone">
+            <div class="iphone-screen">
+              <div class="iphone-status">
+                <span>7:51</span>
+                <span class="iphone-notch" aria-hidden="true"></span>
+                <span class="iphone-icons" aria-hidden="true">
+                  <span class="iphone-signal"><span></span><span></span><span></span><span></span></span>
+                  <span>Wi-Fi</span>
+                  <span class="iphone-battery"></span>
+                </span>
+              </div>
+              <div class="rcs-header">
+                <div class="mclaren-mark" aria-label="McLaren logo">M</div>
+                <div class="rcs-sender"><span class="rcs-verified">✓</span> McLaren Health Care <span aria-hidden="true">›</span></div>
+              </div>
+              <div class="chat" id="chat">
+                <div class="msg system">Choose a scenario to watch the agent work</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result-bar" id="resultBar">
+          <div><div class="r-num" id="rTime">—</div><div class="r-lab">Resolution Time</div></div>
+          <div><div class="r-num" id="rStaff">—</div><div class="r-lab">Staff Minutes Used</div></div>
+          <div><div class="r-num" id="rOutcome">—</div><div class="r-lab">Outcome</div></div>
+        </div>
+      </div>
     </section>
 
     <section id="great-lakes" class="reveal">
-      <div class="section-kicker">About Slalom Great Lakes</div>
-      <div class="expertise">
-        <div>
-          <h2>Local commitment, global capability.</h2>
-          <p class="lead">Slalom Michigan has humble but palpable pride among our 300+ consultants—pride in Michigan, Slalom, and what we're building here together. We love investing our time and energy into Michigan, and working with clients who share our passion for helping this state thrive.</p>
-          <a class="button secondary" href="https://www.slalom.com/us/en/who-we-are/locations/michigan" target="_blank" rel="noopener">Learn more about Slalom Michigan</a>
-        </div>
+          <div class="section-kicker">About Slalom Great Lakes</div>
+          <div class="expertise">
+            <div>
+              <h2>Local commitment, global capability.</h2>
+              <p class="lead">Slalom Michigan has humble but palpable pride among our 300+ consultants—pride in Michigan, Slalom, and what we're building here together. We love investing our time and energy into Michigan, and working with clients who share our passion for helping this state thrive.</p>
+              <div class="great-lakes-actions">
+                <a class="button secondary" href="https://www.slalom.com/us/en/who-we-are/locations/michigan" target="_blank" rel="noopener">Learn more about Slalom Michigan</a>
+                <a class="button secondary" href="https://www.slalom.com/us/en/industries/healthcare" target="_blank" rel="noopener">Learn more about Slalom Healthcare expertise</a>
+              </div>
+            </div>
         <div class="proof-list great-lakes-list">
           <div class="proof-row">
             <strong>Services</strong>
-            <div>Slalom works from strategy through delivery across business strategy, customer strategy, systems implementation, integration, data, AI, cloud, privacy, security, product delivery, and organizational change.<span>Source: Slalom overview.</span></div>
+            <div>Slalom works from strategy through delivery across business strategy, customer strategy, systems implementation, integration, data, AI, cloud, privacy, security, product delivery, and organizational change.</div>
           </div>
           <div class="proof-row">
             <strong>Outcomes</strong>
@@ -939,14 +1489,7 @@
           </div>
           <div class="proof-row">
             <strong>Partners</strong>
-            <div>Verified McLaren technology signals that align to Slalom partner lanes include:
-              <div class="partner-tags" aria-label="Verified McLaren technology partner signals">
-                <span>Salesforce</span>
-                <span>Microsoft</span>
-              </div>
-              Slalom can also integrate to McLaren's EHR Epic and Cerner, while validating the exact platform landscape with McLaren IT.
-              <span>Source posture: Salesforce and Microsoft are verified from McLaren public/careers research and are Slalom partner lanes; Epic/Cerner are listed as integration context, not claimed here as Slalom strategic partners.</span>
-            </div>
+            <div>Slalom can integrate to McLaren's EHR Epic and Cerner, while validating the exact platform landscape with McLaren IT.</div>
           </div>
         </div>
       </div>
@@ -956,20 +1499,25 @@
       <div class="cta-inner">
         <div class="section-kicker">Next step</div>
         <h2>Choose the conversation that fits your timing.</h2>
-        <p class="lead">Slalom can help McLaren evaluate patient communication readiness, prioritize patient journeys, validate consent and compliance needs, and design a first pilot that proves value quickly.</p>
+        <p class="lead">Slalom can help McLaren evaluate patient communication readiness, prioritize patient journeys, validate consent and compliance needs, and design a first pilot that proves value quickly. Selected Slalom technology partners offer funding for proof of concepts and small pilots.</p>
 
         <div class="cta-options">
-          <a class="cta-option" href="https://example.com/schedule-slalom-healthcare" target="_blank" rel="noopener">
+          <a class="cta-option" href="https://bookings.cloud.microsoft/bookwithme/user/a9dddddc4b154ea5a92ecd73e2693301%40slalom.com/meetingtype/GmhNOliNE0u2iE4jg3Fk7Q2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener">
             <strong>I’d like to speak with Slalom health care experts ASAP</strong>
-            <span>Schedule time</span>
+            <span>If you have an immediate need, let us know and we can meet ASAP to discuss options.</span>
+          </a>
+          <a class="cta-option" href="https://bookings.cloud.microsoft/bookwithme/user/a9dddddc4b154ea5a92ecd73e2693301%40slalom.com/meetingtype/GmhNOliNE0u2iE4jg3Fk7Q2?anonymous&ismsaljsauthenabled" target="_blank" rel="noopener">
+            <strong>Discuss an AI Workshop</strong>
+            <span>Many HCPs are struggling with technology selection, AI use case prioritization, and where to start or scale given AI noise and confusion. Slalom offers 4-hour half-day workshops to share how other HCPs are leveraging new AI solutions to improve operations, patient experiences, and provider experiences.</span>
+            <span>Click to Schedule Discussion</span>
           </a>
           <a class="cta-option" href="mailto:nick.linne@slalom.com?subject=McLaren%20RCS%20Patient%20Front%20Door%20Briefing&body=Nick%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20the%20RCS%20patient%20front%20door%20idea%20for%20McLaren.%0A">
             <strong>I’d like to learn more</strong>
-            <span>Email Nick Linne · nick.linne@slalom.com</span>
+            <span>Slalom invests in our customers and communities. If your team needs to be more aware of trends in the intersection of provider and patient experiences and emerging technology solutions, let us know and we can craft a tailored briefing for your executive teams.</span>
           </a>
           <a class="cta-option" href="mailto:nick.linne@slalom.com?subject=Stay%20in%20touch%20on%20McLaren%20patient%20communications&body=Nick%2C%0A%0ANo%20thanks%20for%20now%2C%20but%20please%20stay%20in%20touch%20on%20patient%20communications%20and%20RCS%20ideas.%0A">
             <strong>No thanks, but stay in touch</strong>
-            <span>Email Nick Linne · nick.linne@slalom.com</span>
+            <span>If now is not a good time, we understand. Evolving health care technology takes time. Let us know when a better time would be to re-connect. AI is moving fast, what's hot and interesting will evolve rapidly.</span>
           </a>
         </div>
       </div>
@@ -980,6 +1528,11 @@
     Prepared by Slalom for McLaren Health Care discussion. Conceptual briefing only; RCS availability, consent, HIPAA/privacy, carrier support, and fallback rules should be validated before launch.
   </footer>
 
+  <script type="module">
+    import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@latest/dist/index.mjs';
+    inject();
+  </script>
+  
   <script>
     const PASSCODE = "Intro2Slalom";
     const passcodeGate = document.getElementById("passcodeGate");
@@ -1082,6 +1635,128 @@
     }
     visitRange.addEventListener("input", updateMessages);
     updateMessages();
+
+    const SCENARIOS = [
+      {
+        msgs: [
+          ["system", "Tuesday, 2:07 AM - McLaren clinic phones closed for 11 more hours"],
+          ["patient", "Hi - my mom needs a follow-up with her cardiologist at McLaren Flint. She was just discharged and I'm worried. Can I get something this week?"],
+          ["agent", "I can help right now. I see Dr. [Cardiologist] has openings Thursday at 9:40 AM and Friday at 2:15 PM at McLaren Flint. Given the recent discharge, I'd suggest Thursday - shall I book it?"],
+          ["patient", "Thursday works. Thank you!"],
+          ["agent", "Booked ✓ Confirmation sent by text. I've also flagged the visit as post-discharge follow-up so the care team has context, and added a reminder call for Wednesday evening. Anything else tonight?"]
+        ],
+        results: ["94 sec", "0 min", "Booked at 2 AM ✓"]
+      },
+      {
+        msgs: [
+          ["system", "Weekday, 11:40 AM - peak call volume, 14 callers in queue"],
+          ["patient", "I need a refill on my blood pressure medication. The pharmacy said the prescription expired."],
+          ["agent", "Let me take care of that. I've verified your last fill and sent a renewal request to your McLaren primary care provider - these are typically approved within 4 business hours. I'll text you the moment it's sent to your pharmacy."],
+          ["patient", "That's it? I was bracing for an hour on hold."],
+          ["agent", "That's it. And I noticed you're due for your annual wellness visit - want me to find a time while I have you?"],
+          ["patient", "Sure, sometime next month."],
+          ["agent", "Done - June 18 at 10 AM ✓ Two tasks, one conversation, zero hold time."]
+        ],
+        results: ["2.5 min", "0 min", "Refill + visit booked ✓"]
+      },
+      {
+        msgs: [
+          ["system", "Saturday, 4:15 PM - billing office closed until Monday"],
+          ["patient", "I got a bill for $840 and I don't understand it. My insurance was supposed to cover this."],
+          ["agent", "I understand - surprise bills are stressful. I've pulled the claim: your insurer processed it before your updated coverage took effect on the service date. I can resubmit with the corrected coverage on file right now."],
+          ["patient", "Yes, please do that."],
+          ["agent", "Resubmitted ✓ You'll see a revised statement in 7-10 days - most patients in this situation owe significantly less after reprocessing. I've paused the balance so you won't get collection notices while it's under review. A summary is in your portal."],
+          ["patient", "Wow. Okay. Thank you."]
+        ],
+        results: ["3 min", "0 min", "Claim fixed, Saturday ✓"]
+      },
+      {
+        msgs: [
+          ["system", "Location sharing enabled for this McLaren conversation"],
+          ["patient", "Send me directions to your closest facility."],
+          ["agent", "The closest McLaren location is McLaren Flint, about 3.2 miles away. I can send turn-by-turn directions and parking guidance now."],
+          ["map", "McLaren Flint - 401 S Ballenger Hwy. Fastest route: 10 minutes, 3.2 miles."],
+          ["patient", "Yes, send it."],
+          ["agent", "Directions sent ✓ I added the main entrance, parking notes, and a one-tap call option in case you need help on arrival."]
+        ],
+        results: ["48 sec", "0 min", "Directions sent ✓"]
+      }
+    ];
+
+    const chat = document.getElementById("chat");
+    const rTime = document.getElementById("rTime");
+    const rStaff = document.getElementById("rStaff");
+    const rOutcome = document.getElementById("rOutcome");
+    const scenarioButtons = document.querySelectorAll(".scen-btn");
+    const scenarioMessageDelay = 1000;
+    let scenarioTimers = [];
+
+    const messageIcons = {
+      patient: "U",
+      agent: "M"
+    };
+
+    function createMapCard(text) {
+      const card = document.createElement("div");
+      card.className = "msg map-card";
+      card.innerHTML = `
+        <div class="map-visual" aria-hidden="true">
+          <div class="map-route"></div>
+          <div class="map-pin start"></div>
+          <div class="map-pin end"></div>
+          <div class="map-label">10 min<br>3.2 miles</div>
+          <div class="map-road one">W Court St</div>
+          <div class="map-road two">Saginaw St</div>
+          <div class="map-road three">Flint Children's Museum</div>
+        </div>
+        <div class="map-copy"><strong>Closest facility route</strong>${text}</div>
+      `;
+      return card;
+    }
+
+    function addChatMessage(type, text) {
+      if (type === "map") {
+        chat.appendChild(createMapCard(text));
+        chat.scrollTop = chat.scrollHeight;
+        return;
+      }
+
+      const message = document.createElement("div");
+      message.className = `msg ${type}`;
+      if (messageIcons[type]) {
+        const icon = document.createElement("span");
+        icon.className = "msg-icon";
+        icon.textContent = messageIcons[type];
+        message.appendChild(icon);
+      }
+      message.appendChild(document.createTextNode(text));
+      chat.appendChild(message);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function runScenario(event, index) {
+      scenarioTimers.forEach(clearTimeout);
+      scenarioTimers = [];
+      scenarioButtons.forEach(button => button.classList.remove("active"));
+      event.currentTarget.classList.add("active");
+      chat.innerHTML = "";
+      rTime.textContent = "—";
+      rStaff.textContent = "—";
+      rOutcome.textContent = "—";
+
+      const scenario = SCENARIOS[index];
+      scenario.msgs.forEach(([type, text], messageIndex) => {
+        const timer = setTimeout(() => addChatMessage(type, text), messageIndex * scenarioMessageDelay);
+        scenarioTimers.push(timer);
+      });
+
+      const resultTimer = setTimeout(() => {
+        [rTime.textContent, rStaff.textContent, rOutcome.textContent] = scenario.results;
+      }, scenario.msgs.length * scenarioMessageDelay + 120);
+      scenarioTimers.push(resultTimer);
+    }
+
+    window.runScenario = runScenario;
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
